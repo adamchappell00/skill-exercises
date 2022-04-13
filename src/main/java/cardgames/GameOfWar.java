@@ -17,8 +17,7 @@ public class GameOfWar {
         playerOneDeal.addAll(deck.subList( 0, (deck.size()/2)));
         playerTwoDeal.addAll(deck.subList(deck.size()/2, deck.size()));
 
-
-        // SOut the Hands
+        // sout the Hands
         System.out.println("Player One Hand:");
         for(Card card :playerOneDeal){
             System.out.println("Card: "+card.getName() + " of " + card.getSuit());
