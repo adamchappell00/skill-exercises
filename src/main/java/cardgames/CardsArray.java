@@ -1,8 +1,11 @@
 package cardgames;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class CardsArray {
-    public static Card[] getAllCards(){
-        return new Card[]{
+    public static ArrayList<Card> getAllCards(){
+        return new ArrayList<Card>(Arrays.asList(
                 new Card("Hearts", "Two",2),
                 new Card("Hearts", "Three",3),
                 new Card("Hearts", "Four",4),
@@ -58,7 +61,7 @@ public class CardsArray {
                 new Card("Spades", "Jack",11),
                 new Card("Spades", "Queen",12),
                 new Card("Spades", "King",13),
-                new Card("Spades", "Ace",14),
-        };
+                new Card("Spades", "Ace",14)
+            ));
     }
 }
