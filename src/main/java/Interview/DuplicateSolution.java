@@ -13,24 +13,25 @@ O(1) extra memory.
 */
 // Testing:
 
+import java.util.Arrays;
+
 public class DuplicateSolution {
 
     public static int removeDuplicates(int[] nums){
+        // If the Array has no values, it has no unique values/indexes
+        if (nums.length == 0){return 0;}
 
-        int uniqueIndex = 0;
-
-        for(int i = 1; i < nums.length; i++){
-            if(nums[i] == nums[i - 1]){
-                int temp = nums[i];
-                for(int j = i; j < (nums.length - 1); j++){
-                    nums[j] = nums[j+1];
-                }
-                nums[nums.length-1] = temp;
-            }else{
-                uniqueIndex = i;
+        // First Pointer
+        int i = 0;
+        // Second Pointer
+        for (int j = 1; j < nums.length; j++) {
+            // If the values are not the same, increment i, which is the count of unique values
+            if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
             }
         }
-        return uniqueIndex;
+        // Because i is the index of the unique numbers, return the quantity of unique numbers by i + 1
+        return i + 1;
     }
-
 }
