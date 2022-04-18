@@ -1,4 +1,4 @@
-package Interview;
+package interview;
 
 // Source : https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 // Description:
@@ -12,8 +12,6 @@ Do not allocate extra space for another array. You must do this by modifying the
 O(1) extra memory.
 */
 // Testing:
-
-import java.util.Arrays;
 
 public class DuplicateSolution {
 

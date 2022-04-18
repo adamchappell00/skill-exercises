@@ -1,9 +1,11 @@
-import Interview.DuplicateSolution;
+import interview.DuplicateSolution;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class InterviewTests {
 
+
+    // TARGET EXERCISE - DuplicateSolution
     @Test
     public void testDuplicatesRemoved(){
         // Input array
