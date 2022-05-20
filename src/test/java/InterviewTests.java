@@ -21,6 +21,9 @@ public class InterviewTests {
         for (int i = 0; i < k; i++) {
             assert nums[i] == expectedNums[i];
         }
+        System.out.println("Remove Duplicates Input: " + nums);
+        System.out.println("Remove Duplicates Output: " + k);
+
     }
 
     // TARGET EXERCISE - CompressionStrings
@@ -37,5 +40,9 @@ public class InterviewTests {
         // Assert
         assertEquals(expectedOutputString1, actualOutput1);
         assertEquals(expectedOutputString2, actualOutput2);
+        System.out.println("Input 1: "+compressedInput1);
+        System.out.println("Actual Output1: "+actualOutput1);
+        System.out.println("Input 2: " + compressedInput2);
+        System.out.println("Actual Output2: "+actualOutput2);
     }
 }
