@@ -2,15 +2,21 @@ package cardgames;
 
 public class Card {
 
-    String suit;
-    String name;
-    int warValue;
+    private String suit;
+    private String name;
+    private int warValue;
 
     public Card(String suit, String name, int warValue) {
         this.suit = suit;
         this.name = name;
         this.warValue = warValue;
     }
+
+    @Override
+    public String toString() {
+        return "The " + name + " of " + suit;
+    }
+
 
     public String getSuit() {return suit;}
     public void setSuit(String suit) {this.suit = suit;}
