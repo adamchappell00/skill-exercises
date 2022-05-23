@@ -26,4 +26,32 @@ public class CompressionStrings {
         }
         return outputString;
     }
+
+    public static String compressString(String inputString){
+        String outputString = "";
+        char currentChar = inputString.charAt(0);
+        int thisCharCount = 1;
+        int i = 1;
+        System.out.println("Input String:"+inputString+" with length "+inputString.length());
+
+        while(i <= (inputString.length())){
+            System.out.println("Start Loop, char:" + currentChar + " output:" +outputString + ", index:"+i);
+            if(inputString.charAt(i) == currentChar){
+                thisCharCount += 1;
+                i++;
+            } else {
+                outputString = outputString + thisCharCount + currentChar;
+                currentChar = inputString.charAt(i);
+                thisCharCount = 1;
+                i++;
+            }
+            if(i == (inputString.length())){
+                outputString = outputString + thisCharCount + currentChar;
+                i++;
+            }
+        }
+
+        System.out.println("Output String Complete: " + outputString);
+        return outputString;
+    }
 }

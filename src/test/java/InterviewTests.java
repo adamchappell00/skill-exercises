@@ -40,9 +40,29 @@ public class InterviewTests {
         // Assert
         assertEquals(expectedOutputString1, actualOutput1);
         assertEquals(expectedOutputString2, actualOutput2);
+        // Print to Show
         System.out.println("Input 1: "+compressedInput1);
         System.out.println("Actual Output1: "+actualOutput1);
         System.out.println("Input 2: " + compressedInput2);
+        System.out.println("Actual Output2: "+actualOutput2);
+    }
+
+    @Test
+    public void shouldCompressString(){
+        // Arrange - Uncompressed Input Strings and Expected Compressed Outputs
+        String uncompressedInput1 = "ppplllliin";
+        String uncompressedInput2 = "HjjjjjmmmmmmmmmmmmWW";
+        String expectedOutputString1 = "3p4l2i1n";
+        String expectedOutputString2 = "1H5j12m2W";
+        // Act - Perform the Compression
+        String actualOutput1 = CompressionStrings.compressString(uncompressedInput1);
+        String actualOutput2 = CompressionStrings.compressString(uncompressedInput2);
+        // Assert
+        assertEquals(expectedOutputString1, actualOutput1);
+        assertEquals(expectedOutputString2, actualOutput2);
+        System.out.println("Input 1: "+ uncompressedInput1);
+        System.out.println("Actual Output1: "+actualOutput1);
+        System.out.println("Input 2: " + uncompressedInput2);
         System.out.println("Actual Output2: "+actualOutput2);
     }
 }
