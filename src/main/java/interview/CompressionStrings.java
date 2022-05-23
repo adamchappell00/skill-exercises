@@ -26,4 +26,9 @@ public class CompressionStrings {
         }
         return outputString;
     }
+
+    public static String compressString(String inputString){
+        String outputString = "";
+        return outputString;
+    }
 }
